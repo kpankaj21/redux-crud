@@ -37,12 +37,7 @@ const chnageTheNumber = (state = initialState, action) => {
         list: newList,
       };
 
-      // case "Edit_value" :
-      //   const newValue =state.list.filter((elem) => elem.id === action.id)
-      //   return {
-      //     ...state,
-      //     list:newValue,
-      //   }
+       
 
     case "Remove_all":
       return {

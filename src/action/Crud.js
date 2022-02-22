@@ -15,12 +15,7 @@ export const deleteTheValue = (id) => {
         }
     }
 
-// export const editTheValue =(id) => {
-//     return {
-//         type :"Edit_value",
-//         id
-//     }
-// }    
+    
 export const removeAll =() => {
     return {
         type : "Remove_all",

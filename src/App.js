@@ -1,9 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTheValue, deleteTheValue, editTheValue, removeAll } from "./action/Crud";
+import { addTheValue, deleteTheValue, removeAll } from "./action/Crud";
 import { Button, TextField } from "@mui/material";
-
 
 function App() {
   const [inputData, setInputData] = useState("");
@@ -18,7 +17,7 @@ function App() {
       alert("plz insert the value...");
     }
   };
-   
+
   return (
     <>
       <div className="App">
@@ -43,7 +42,7 @@ function App() {
         >
           Add
         </Button>
-      </div> 
+      </div>
 
       <div>
         {myState &&
@@ -52,32 +51,19 @@ function App() {
             return (
               <div className="App">
                 <h3>
-                <label style={{color:"green"}}>
-                  {elem.data}
-
-                </label>
-                {/* <Badge color="blue">
+                  <label style={{ color: "green" }}>{elem.data}</label>
+                  {/* <Badge color="blue">
 
                 </Badge> */}
 
                   <Button
                     variant="outlined"
-                    
                     color="error"
-                    style={{ color: "red", margin: "4px",  }}
+                    style={{ color: "red", margin: "4px" }}
                     onClick={() => dispatch(deleteTheValue(elem.id))}
                   >
                     Delete
                   </Button>
-
-                  {/* <Button
-                    variant="outlined"
-                    color="success"
-                    style={{ color: "green", margin: "4px",verticalAlign:"top" }}
-                    onClick={() =>  dispatch(editTheValue(elem.id))}
-                  >
-                    Edit
-                  </Button> */}
                 </h3>
               </div>
             );
